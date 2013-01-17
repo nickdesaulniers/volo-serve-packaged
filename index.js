@@ -20,8 +20,12 @@ module.exports = {
 
     http.createServer(function (req, res) {
       res.end('hello world');
-      //d.resolve('done');
     }).listen(port);
 
+    process.on('SIGINT', function () {
+      console.log('Shutting down');
+      d.resolve('Done');
+      process.exit(1);
+    });
   }
 };
