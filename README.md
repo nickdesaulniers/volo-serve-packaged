@@ -15,3 +15,6 @@ Then:
     volo serve-packaged
 
 That will run the test volofile at `test/volofile`.
+
+# This project has been shelved #
+Use [serve_packaged_apps.py](https://github.com/mozilla/zamboni/blob/master/scripts/serve_packaged_apps.py) instead.
