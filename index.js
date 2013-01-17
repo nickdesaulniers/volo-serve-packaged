@@ -18,10 +18,10 @@ module.exports = {
     var port = namedArgs.port ? arg1 : 3000;
     console.log('Will run on port ' + port);
 
-    var app = http.createServer(function (req, res) {
-      res.send('hello world');
+    http.createServer(function (req, res) {
+      res.end('hello world');
       //d.resolve('done');
-    });
+    }).listen(port);
 
   }
 };
