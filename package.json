@@ -11,6 +11,8 @@
     "node": ">=0.6.17"
   },
   "dependencies": {
-    "send": "0.1.0"
+    "send": "0.1.0",
+    "node-native-zip": "1.1.0",
+    "shelljs": "0.1.2"
   }
 }
