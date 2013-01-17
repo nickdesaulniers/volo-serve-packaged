@@ -1,5 +1,7 @@
 var fs = require('fs'),
-    path = require('path');
+    path = require('path'),
+    http = require('http'),
+    send = require('send');
 
 module.exports = {
   summary: 'Serve packaged Firefox OS apps for rapid development using volo.',
@@ -15,6 +17,11 @@ module.exports = {
   run: function (d, v, namedArgs, arg1) {
     var port = namedArgs.port ? arg1 : 3000;
     console.log('Will run on port ' + port);
-    d.resolve('done');
+
+    var app = http.createServer(function (req, res) {
+      res.send('hello world');
+      //d.resolve('done');
+    });
+
   }
 };
